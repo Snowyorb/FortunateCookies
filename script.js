@@ -1,3 +1,8 @@
 //Hello?
-var string = new String("Hewwo");
-console.log(string);
+function nickNameCookie(){
+   var nck = document.cookie = document.getElementById("nickname");
+   console.log(nck);
+}
+
+
+
