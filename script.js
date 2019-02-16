@@ -5,5 +5,7 @@ function nickNameCookie(){
    
 }
 
-
+document.getElementById("createFortune").addEventListener('click', function() {
+  document.getElementById("createFortuneDiv").innerHTML = "<input type='text' name='newFortune' placeholder='Create Fortune Here'>";
+}); 
 
