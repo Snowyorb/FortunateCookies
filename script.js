@@ -2,7 +2,20 @@
 function nickNameCookie(){
    var nck = document.cookie = document.getElementById("nickname");
    console.log(nck);
+}
+function giveFortune(){
+   var audio = new Audio("./sounds/Sax Seal.mp3") ;
+
+   audio.oncanplaythrough = function(){
+   audio.play();
+   }
    
+   audio.loop = true;
+   
+   audio.onended = function(){
+   audio.play();
+   }
+   console.log("i got a fortunate cookie")
 }
 
 var array = [
