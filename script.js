@@ -1,17 +1,21 @@
-//Hello?
-function nickNameCookie(){
-   document.cookie = document.getElementById("nickname").value;
-   var nck = document.cookie = document.getElementById("nickname").value;
-   console.log(nck);
+
+function getCookie() {
+   return document.cookie = document.getElementById("nickname");
+   // return document.cookie = document.myForm.nickname.value;
 }
+
 function giveFortune(){
-   var audio = new Audio("./sounds/Sax Seal.mp3") ;
+   var nck = getCookie();
+   console.log(nck);   
+   document.getElementById("myId").value = nck;
+   
+   //var audio = new Audio("./sounds/Sax Seal.mp3") ;
 
    audio.oncanplaythrough = function(){
    audio.play();
    }
    
-   audio.loop = true;
+   audio.loop = false;
    
    audio.onended = function(){
    audio.play();
@@ -44,3 +48,4 @@ var array = [
    "Is a hippopotamus a hippopotamus or just a really cool opotamus?",
    "“People don’t think the universe be like it is, but it do.” -Black Science Man",
    "If everyone donated one penny to NASA, it would be really hard to count them."];
+
