@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <script src="script.js"></script>
-    <h1>Fortunate Cookies</h1>
-
-    <form name="cf">
-        Enter a nick name<input type="text" name="cdf">
-        <a href="fortune.html"> <button type="button" onclick="putCookie()">Submit</button></a>
+    <nav>
+        <h3 class="nav">Fortunate Cookies</h3>
+    </nav>
+        <script src="script.js"></script>
+    <h1>Fortunate Cookies!</h1>
+    <h2>Who's the lucky cookie today?</h2>
+    <form onsubmit="fortune.html" name="myform">
+        <input type="text" name="nickname" id="nickname" placeholder="User Name Entry">
+        <a href="fortune.html"> <button id="button" type="button" onclick="nickNameCookie()">Submit</button></a>
    </form>
     
 </body>
