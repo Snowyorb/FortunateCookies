@@ -1,31 +1,12 @@
 
 function getCookie() {
    return document.cookie = document.getElementById("nickname");
-   // return document.cookie = document.myForm.nickname.value;
-}
-
-cookie_name = "dataCookie";
-var YouEntered;
-
-function putCookie() {
-
-if(document.cookie != document.cookie) 
-{index = document.cookie.indexOf(cookie_name);}
-else 
-{ index = -1;}
-
-if (index == -1)
-{
-YouEntered=document.cf.cfd.value;
-document.cookie=cookie_name+"="+YouEntered+"; expires=Monday, 04-Apr-2010 05:00:00 GMT";
-}
-
 }
 
 function giveFortune(){  
    document.getElementById("myId").value = document.cookie.split("=")[1];
    
-   //var audio = new Audio("./sounds/Sax Seal.mp3") ;
+   var audio = new Audio("./sounds/Sax Seal.mp3") ;
 
    audio.oncanplaythrough = function(){
    audio.play();
