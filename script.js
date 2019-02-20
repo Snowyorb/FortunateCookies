@@ -1,4 +1,3 @@
-//Hello?
 
 document.getElementById('createFortuneNow').hidden = true;
 document.getElementById('textEntryNewFortune').hidden = true;
@@ -39,9 +38,10 @@ var array = [
    "If everyone donated one penny to NASA, it would be really hard to count them."
 ];
 
+
 console.log(array);
 document.getElementById("createFortuneNow").addEventListener('click', function(evt) {
-//   evt.preventDefault();
+
   if (document.getElementById("textEntryNewFortune").value == "") {
     alert('Please enter something if you are going to submit.');
   } else {
@@ -55,17 +55,50 @@ document.getElementById("createFortuneNow").addEventListener('click', function(e
 });
 
 function randomQuote() {
-  random = Math.floor(Math.random() * array.length);
-  console.log(random);
-  return random;
+   random = Math.floor(Math.random() * array.length);
+   console.log(random);
+   return random;
+}
+function makeNickName(){
+                  // nck = document.forms['myform']['nickname'];
+    var nck = document.forms.myForm;
+    var formData = new FormData(nck);
+   var nickName = formData.get("nickname");
+   return nickName;
 }
 
+var fc = (array[randomQuote()-1]);
+console.log(fc);
+var list = document.getElementById("items");
+var temp;
 
-console.log(array[randomQuote()-1]);
 document.getElementById('fortuneCookieImg').addEventListener('click', function() {
-  document.getElementById('fortuneText').hidden = true;
-  document.getElementById('fortuneCookieImg').setAttribute('src', 'Images/cookie.gif');
-  setTimeout(function(){ document.getElementById('fortuneCookieImg').setAttribute('src', 'Images/cookiebigboi.png'); document.getElementById('fortuneText').hidden = false; document.getElementById('fortuneText').innerHTML = array[randomQuote()-1]; }, 3000);
+   document.getElementById('fortuneText').hidden = true;
+   document.getElementById('fortuneCookieImg').setAttribute('src', 'Images/cookie.gif');
+   setTimeout(function(){ document.getElementById('fortuneCookieImg').setAttribute('src', 'Images/cookiebigboi.png');
+   document.getElementById('fortuneText').hidden = false; 
+   document.getElementById('fortuneText').innerHTML = fc; }, 3000);
+   var fortunes = "Fortune " + fc;
+   console.log(fortunes);
+   fc = array[randomQuote()-1];
+   var cookieEvidence = document.cookie = fortunes;
+   console.log(cookieEvidence+"!!!!!!!!!!!!!!!!");
+   
+   temp = "<p>";
+   temp += fc;
+   temp += "</p>";
+   
+   var plus = temp;
+   console.log(list +"???BOI");
+   list.innerHTML += plus;
+   console.log(makeNickName()+"HI BOII");
 });
 
-document.cookie([randomQuote()-1]);
+//var nck = document.getElementById("nickname");
+
+
+
+
+
+
+
