@@ -8,7 +8,13 @@ document.getElementById("createFortune").addEventListener('click', function() {
   document.getElementById('textEntryNewFortune').hidden = false;
 }); 
 
-//Whatever the Array is vvvvvvv
+function playSound(){
+   var audio = new Audio("./sounds/cookie.mp3") ;
+
+   audio.oncanplaythrough = function(){
+   audio.play();
+   }
+}
 
 var array = new  Array();
 var array = [
