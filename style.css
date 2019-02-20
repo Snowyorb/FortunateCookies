@@ -61,9 +61,40 @@ a{
     color:#de0b00;
     font-size: 20px;
     width: 200px;
-    margin-left: 42%;
+    margin-left: 43%;
     font-weight: bold;
 }
 .sec{
     margin-left: 10%;
+}
+
+#fortuneText{
+    position:absolute;
+    background-color: white;
+    border: dotted;
+    left: 42%;
+    top: 32%; 
+        align-content: center;
+}
+
+.b{
+    height: 80px;
+    width: 130px;
+    font-size: 20px;
+    display: block;
+    margin-top: 15px;
+    margin-left:45%;
+    color: #FFFFFF;
+    background-color: #de0b00;
+}
+
+#PastTitle{
+    font-size: 30px;
+    color: #00a86b; 
+    text-decoration: underline crimson;
+}
+
+#items{
+    font-size: 20px;
+    text-decoration-style: wavy;
 }
