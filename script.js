@@ -1,25 +1,17 @@
+//Hello?
 
-function getCookie() {
-   return document.cookie = document.getElementById("nickname");
-}
+document.getElementById('createFortuneNow').hidden = true;
+document.getElementById('textEntryNewFortune').hidden = true;
 
-function giveFortune(){  
-   document.getElementById("myId").value = document.cookie.split("=")[1];
-   
-   var audio = new Audio("./sounds/Sax Seal.mp3") ;
 
-   audio.oncanplaythrough = function(){
-   audio.play();
-   }
-   
-   audio.loop = false;
-   
-   audio.onended = function(){
-   audio.play();
-   }
-   console.log("i got a fortunate cookie")
-}
+document.getElementById("createFortune").addEventListener('click', function() {
+  document.getElementById('createFortuneNow').hidden = false;
+  document.getElementById('textEntryNewFortune').hidden = false;
+}); 
 
+//Whatever the Array is vvvvvvv
+
+var array = new  Array();
 var array = [
    "If at first you don’t succeed, TPose harder",
    "When in doubt, dab it out",
@@ -44,5 +36,34 @@ var array = [
    "Life is soup and you’re a fork",
    "Is a hippopotamus a hippopotamus or just a really cool opotamus?",
    "“People don’t think the universe be like it is, but it do.” -Black Science Man",
-   "If everyone donated one penny to NASA, it would be really hard to count them."];
+   "If everyone donated one penny to NASA, it would be really hard to count them."
+];
 
+console.log(array);
+document.getElementById("createFortuneNow").addEventListener('click', function(evt) {
+  evt.preventDefault();
+  if (document.getElementById("textEntryNewFortune").value == "") {
+    alert('Please enter something if you are going to submit.');
+  } else {
+    alert('Thanks for entering a fortune!');
+    newEntry = document.getElementById('textEntryNewFortune').value;
+    array.push(newEntry);
+    console.log(array);
+    document.getElementById('createFortuneNow').hidden = true;
+    document.getElementById('textEntryNewFortune').hidden = true;
+  }
+});
+
+function randomQuote() {
+  random = Math.floor(Math.random() * array.length);
+  console.log(random);
+  return random;
+}
+
+console.log(array[randomQuote()-1]);
+
+document.getElementById('fortuneCookieImg').addEventListener('click', function() {
+  document.getElementById('fortuneText').hidden = true;
+  document.getElementById('fortuneCookieImg').setAttribute('src', 'Images/cookie.gif');
+  setTimeout(function(){ document.getElementById('fortuneCookieImg').setAttribute('src', 'Images/cookiebigboi.png'); document.getElementById('fortuneText').hidden = false; document.getElementById('fortuneText').innerHTML = array[randomQuote()-1]; }, 3000);
+});

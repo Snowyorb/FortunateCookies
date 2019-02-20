@@ -8,16 +8,20 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <nav>
-        <h3 class="nav">Fortunate Cookies</h3>
-    </nav>
-        <script src="script.js"></script>
-    <h1>Fortunate Cookies!</h1>
-    <h2>Who's the lucky cookie today?</h2>
-    <form onsubmit="fortune.html" name="myform">
-        <input type="text" name="nickname" id="nickname" placeholder="User Name Entry">
-        <a href="fortune.html"> <button id="button" type="button" onclick="nickNameCookie()">Submit</button></a>
-   </form>
-    
+    <h1>Fortunate Cookies</h1>
+    <div id="fortuneCookie">
+        <img id="fortuneCookieImg" src="./Images/cookie.png">
+        <div>
+            <p id="fortuneText" style="position:absolute; z-index: 2; left: 25%; top: 32%; align-content: center;"></p>
+        </div>
+    </div>
+
+    <button id="createFortune">Create Fortune</button>
+    <!-- Create Fortune Form  -->
+    <form id="createFortuneDiv">
+            <input type='text' name='newFortune' placeholder='Create Fortune Here' id='textEntryNewFortune'><br>
+            <button id='createFortuneNow'>Create</button>
+    </form>
+    <script src="script.js"></script>
 </body>
 </html>
