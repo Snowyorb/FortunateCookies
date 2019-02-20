@@ -41,7 +41,7 @@ var array = [
 
 console.log(array);
 document.getElementById("createFortuneNow").addEventListener('click', function(evt) {
-  evt.preventDefault();
+//   evt.preventDefault();
   if (document.getElementById("textEntryNewFortune").value == "") {
     alert('Please enter something if you are going to submit.');
   } else {
@@ -60,10 +60,12 @@ function randomQuote() {
   return random;
 }
 
-console.log(array[randomQuote()-1]);
 
+console.log(array[randomQuote()-1]);
 document.getElementById('fortuneCookieImg').addEventListener('click', function() {
   document.getElementById('fortuneText').hidden = true;
   document.getElementById('fortuneCookieImg').setAttribute('src', 'Images/cookie.gif');
   setTimeout(function(){ document.getElementById('fortuneCookieImg').setAttribute('src', 'Images/cookiebigboi.png'); document.getElementById('fortuneText').hidden = false; document.getElementById('fortuneText').innerHTML = array[randomQuote()-1]; }, 3000);
 });
+
+document.cookie([randomQuote()-1]);

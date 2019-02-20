@@ -51,9 +51,9 @@ a{
     text-decoration-line: none;
     text-decoration: none;
 }
-#myimage{
-    height: 350px;
-    Width: 350px;
+.myimage{
+    height: 250px;
+    Width: 250px;
 }
 .info{
     text-align: center;

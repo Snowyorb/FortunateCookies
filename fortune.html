@@ -11,9 +11,22 @@
     <nav>
         <p class="nav">Fortunate Cookies</p>
     </nav>
+    <h1>Fortunate Cookies</h1>
+    <div id="fortuneCookie">
+        <img id="fortuneCookieImg" class="myimage" src="./Images/cookie.png">
+        <div>
+            <p id="fortuneText" style="position:absolute; z-index: 2; left: 25%; top: 32%; align-content: center;"></p>
+        </div>
+    </div>
+
+    <button id="createFortune">Create Fortune</button>
+    <!-- Create Fortune Form  -->
+    <form id="createFortuneDiv">
+            <input type='text' name='newFortune' placeholder='Create Fortune Here' id='textEntryNewFortune'><br>
+            <button id='createFortuneNow'>Create</button>
+    </form>
     <script src="script.js"></script>
     <h1 class="sec">Fortunate Cookies!</h1>
-    <input type="image" id="myimage" src="https://dehayf5mhw1h7.cloudfront.net/wp-content/uploads/sites/114/2017/11/09065150/Fortune-cookie-shutterstock.jpg" onclick="giveFortune()"/>
     <p class="info">Click the Cookie to reveal your fortune.</p>
     <p class="info">Click below to create your own fortune.</p>
 
