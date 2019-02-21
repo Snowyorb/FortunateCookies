@@ -66,7 +66,6 @@ function randomQuote() {
    return random;
 }
 function makeNickName(){
-                  // nck = document.forms['myform']['nickname'];
     var nck = document.forms.myForm;
     var formData = new FormData(nck);
    var nickName = formData.get("nickname");
@@ -99,10 +98,6 @@ document.getElementById('fortuneCookieImg').addEventListener('click', function()
    list.innerHTML += plus;
    console.log(makeNickName()+"HI BOII");
 });
-
-//var nck = document.getElementById("nickname");
-
-
 
 
 
